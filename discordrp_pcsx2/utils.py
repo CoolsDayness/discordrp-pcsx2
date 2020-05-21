@@ -49,7 +49,7 @@ class Game:
 def latest_game(path: str) -> Optional[Game]:
     "Find the latest loaded game from emuLog.txt."
     line = ''
-    log_file = open(f'{path}/bin/logs/emuLog.txt')
+    log_file = open(f'{path}/logs/emuLog.txt')
     for block in _reverse_read(log_file):
         for char in block:
             if char == '\n' and line:
